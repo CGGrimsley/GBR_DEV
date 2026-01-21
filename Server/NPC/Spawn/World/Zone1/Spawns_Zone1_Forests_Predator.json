@@ -1,0 +1,39 @@
+{
+  "Environments": [
+    "Env_Zone1_Forests",
+    "Env_Zone1_Autumn",
+    "Env_Zone1_Azure"
+  ],
+  "NPCs": [
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Bear_Grizzly"
+    },
+    {
+      "Weight": 1,
+      "SpawnBlockSet": "Soil",
+      "Id": "Battle_Hardened_Bear"
+    },
+    {
+      "Weight": 0.5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Bear_Adventurer"
+    },
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Spider"
+    },
+    {
+      "Weight": 5,
+      "SpawnBlockSet": "Soil",
+      "Id": "Wolf_Black",
+      "Flock": "Pack_Small"
+    }
+  ],
+  "DayTimeRange": [
+    6,
+    18
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "Container": {
+    "Type": "Multiple",
+    "Containers": [
+      {
+        "Type": "Single",
+        "Item": {
+          "ItemId": "Food_Wildmeat_Raw",
+          "QuantityMin": 9,
+          "QuantityMax": 11
+        }
+      },
+      {
+        "Type": "Single",
+        "Item": {
+          "ItemId": "Ingredient_Hide_Heavy",
+          "QuantityMin": 7,
+          "QuantityMax": 9
+        }
+      },
+      {
+        "Type": "Choice",
+        "Weight": 100,
+        "Containers": [
+          {
+            "Type": "Choice",
+            "Weight": 55,
+            "Containers": [
+              {
+                "Type": "Single",
+                "Weight": 50,
+                "Item": {
+                  "ItemId": "Ingredient_Bar_Iron",
+                  "QuantityMin": 5,
+                  "QuantityMax": 8
+                }
+              },
+              {
+                "Type": "Single",
+                "Weight": 35,
+                "Item": {
+                  "ItemId": "Ingredient_Bar_Gold",
+                  "QuantityMin": 3,
+                  "QuantityMax": 5
+                }
+              },
+              {
+                "Type": "Single",
+                "Weight": 15,
+                "Item": {
+                  "ItemId": "Ingredient_Bar_Thorium",
+                  "QuantityMin": 4,
+                  "QuantityMax": 5
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Single",
+            "Weight": 10,
+            "Item": {
+              "ItemId": "Armor_Iron_Head",
+              "QuantityMin": 1,
+              "QuantityMax": 1
+            }
+          },
+          {
+            "Type": "Choice",
+            "Weight": 20,
+            "Containers": [
+              {
+                "Type": "Single",
+                "Weight": 60,
+                "Item": {
+                  "ItemId": "Ingredient_Fabric_Scrap_Linen",
+                  "QuantityMin": 5,
+                  "QuantityMax": 9
+                }
+              },
+              {
+                "Type": "Single",
+                "Weight": 40,
+                "Item": {
+                  "ItemId": "Ingredient_Hide_Medium",
+                  "QuantityMin": 3,
+                  "QuantityMax": 8
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

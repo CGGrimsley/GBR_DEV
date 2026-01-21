@@ -1,0 +1,113 @@
+{
+  "Container": {
+    "Type": "Multiple",
+    "Containers": [
+      {
+        "Type": "Single",
+        "Item": {
+          "ItemId": "Ingredient_Hide_Medium",
+          "QuantityMin": 4,
+          "QuantityMax": 5
+        }
+      },
+      {
+        "Type": "Single",
+        "Item": {
+          "ItemId": "Food_Wildmeat_Raw",
+          "QuantityMin": 3,
+          "QuantityMax": 5
+        }
+      },
+      {
+        "Type": "Single",
+        "Item": {
+          "ItemId": "Ingredient_Bone_Fragment",
+          "QuantityMin": 2,
+          "QuantityMax": 4
+        }
+      },
+      {
+        "Type": "Choice",
+        "Weight": 100,
+        "Containers": [
+          {
+            "Type": "Choice",
+            "Weight": 45,
+            "Containers": [
+              {
+                "Type": "Single",
+                "Item": {
+                  "ItemId": "Ingredient_Hide_Light",
+                  "QuantityMin": 2,
+                  "QuantityMax": 4
+                }
+              }
+            ]
+          },
+          {
+            "Type": "Choice",
+            "Weight": 35,
+            "Containers": [
+              {
+                "Type": "Choice",
+                "Weight": 100,
+                "Containers": [
+                  {
+                    "Type": "Single",
+                    "Item": {
+                      "ItemId": "Ingredient_Bar_Iron",
+                      "QuantityMin": 1,
+                      "QuantityMax": 2
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Choice",
+                "Weight": 100,
+                "Containers": [
+                  {
+                    "Type": "Single",
+                    "Item": {
+                      "ItemId": "Ingredient_Bar_Copper",
+                      "QuantityMin": 1,
+                      "QuantityMax": 3
+                    }
+                  }
+                ]
+              },
+              {
+                "Type": "Choice",
+                "Weight": 60,
+                "Containers": [
+                  {
+                    "Type": "Single",
+                    "Item": {
+                      "ItemId": "Ingredient_Bar_Silver",
+                      "QuantityMin": 1,
+                      "QuantityMax": 2
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Type": "Choice",
+            "Weight": 20,
+            "Containers": [
+              {
+                "Type": "Single",
+                "Item": {
+                  "ItemId": "Weapon_Arrow_Crude",
+                  "QuantityMin": 2,
+                  "QuantityMax": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

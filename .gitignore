@@ -1,0 +1,39 @@
+# Development files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+*.code-workspace
+
+# Build and distribution
+dist/
+build/
+*.zip
+*.rar
+*.7z
+
+# Logs and debugging
+*.log
+debug/
+logs/
+
+# Node modules (if any)
+node_modules/
+
+# Python cache (if any)
+__pycache__/
+*.pyc
+*.pyo
+
+# Backup files
+*.orig
+*_backup
+*_old

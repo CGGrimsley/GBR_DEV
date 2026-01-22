@@ -25,8 +25,8 @@ Overhauls creature stats, combat behavior, spawning, and loot tables for more en
 **Download the Asset Pack from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beast-rebalance-asset-pack)**
 
 ⚠️ **Important:** You must download and install **BOTH** files:
-- `golds-beasts-rebalance-2.0.1.jar` (Plugin)
-- `golds-beasts-rebalance-assetpack-2.0.1.zip` (Asset Pack)
+- `golds-beasts-rebalance-2.0.2.jar` (Plugin)
+- `golds-beasts-rebalance-assetpack-2.0.2.zip` (Asset Pack)
 
 #### Dedicated Servers
 1. Download **both** the `.jar` and `.zip` files from CurseForge
@@ -161,8 +161,8 @@ cd GBR_DEV
 mvn clean package
 
 # Output files:
-# - target/golds-beasts-rebalance-2.0.1.jar (Plugin)
-# - target/golds-beasts-rebalance-assetpack-2.0.1.zip (Asset Pack)
+# - target/golds-beasts-rebalance-2.0.2.jar (Plugin)
+# - target/golds-beasts-rebalance-assetpack-2.0.2.zip (Asset Pack)
 ```
 
 ### Project Structure
@@ -216,7 +216,7 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 ## Technical Details
 
-**Version:** 2.0.1  
+**Version:** 2.0.2  
 **Hytale API:** v2026.01.17-4b0f30090  
 **Java Version:** 17+  
 **Build System:** Maven  
@@ -243,4 +243,5 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 **Author:** kdrgold  
 **Team:** The Gold's Beasts Rebalance Team
+
 

@@ -1,7 +1,8 @@
 # Gold's Beasts Rebalance
 
 [![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
-[![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
+[![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
+[![CurseForge - Assets](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
 [![License: Custom](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
 
 > **For Players:** Download the compiled mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)  
@@ -20,19 +21,24 @@ Overhauls creature stats, combat behavior, spawning, and loot tables for more en
 
 ### Installation
 
-**Download the mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
+**Download the plugin from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
+**Download the Asset from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
+
+⚠️ **Important:** You must download and install **BOTH** files:
+- `golds-beasts-rebalance-2.0.1.jar` (Plugin)
+- `golds-beasts-rebalance-assetpack-2.0.1.zip` (Asset Pack)
 
 #### Dedicated Servers
-1. Download the `.jar` file from CurseForge
-2. Place it in `<server-directory>/mods/`
+1. Download **both** the `.jar` and `.zip` files from CurseForge
+2. Place both files in `<server-directory>/mods/`
 3. Restart the server
 
 #### Singleplayer/Local Worlds
-1. Download the `.jar` file from CurseForge
-2. Place it in:
+1. Download **both** the `.jar` and `.zip` files from CurseForge
+2. Place both files in:
    - **Global:** `<data-path>/Hytale/UserData/Mods`
    - **Per-World:** `<data-path>/Hytale/UserData/Saves/<world-name>/mods`
-3. For Global: Right-click your world → Settings → Enable GoldsBeastsRebalance
+3. For Global: Right-click your world → Settings → Enable both mods
 4. Launch your world
 
 **Data paths:**
@@ -154,7 +160,9 @@ cd GBR_DEV
 # Clean and build
 mvn clean package
 
-# Output: target/golds-beasts-rebalance-2.0.0.jar
+# Output files:
+# - target/golds-beasts-rebalance-2.0.1.jar (Plugin)
+# - target/golds-beasts-rebalance-assetpack-2.0.1.zip (Asset Pack)
 ```
 
 ### Project Structure
@@ -208,10 +216,11 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 ## Technical Details
 
-**Version:** 2.0.0  
+**Version:** 2.0.1  
 **Hytale API:** v2026.01.17-4b0f30090  
 **Java Version:** 17+  
 **Build System:** Maven  
+**Distribution:** Separate plugin JAR + asset pack ZIP  
 **License:** See [LICENSE](LICENSE)
 
 ### Key Systems

@@ -6,7 +6,7 @@
 
     <groupId>com.kdrgold</groupId>
     <artifactId>golds-beasts-rebalance</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <packaging>jar</packaging>
 
     <name>Gold's Beasts Rebalance</name>
@@ -53,10 +53,6 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
-                <excludes>
-                    <exclude>Common/**</exclude>
-                    <exclude>Server/**</exclude>
-                </excludes>
             </resource>
         </resources>
 
@@ -71,6 +67,7 @@
                 </configuration>
             </plugin>
 
+            <!-- Build the plugin JAR (no assets) -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
@@ -83,6 +80,29 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Build the asset pack as a separate ZIP -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>3.6.0</version>
+                <executions>
+                    <execution>
+                        <id>create-asset-pack</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/assembly/assetpack.xml</descriptor>
+                            </descriptors>
+                            <finalName>${project.artifactId}-assetpack-${project.version}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>
                 </executions>

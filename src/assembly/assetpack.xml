@@ -1,0 +1,29 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.2.0 http://maven.apache.org/xsd/assembly-2.2.0.xsd">
+    <id>assetpack</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <!-- Include manifest.json from root -->
+        <fileSet>
+            <directory>${project.basedir}</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>manifest.json</include>
+            </includes>
+        </fileSet>
+        <!-- Include Common assets -->
+        <fileSet>
+            <directory>${project.basedir}/Common</directory>
+            <outputDirectory>Common</outputDirectory>
+        </fileSet>
+        <!-- Include Server assets -->
+        <fileSet>
+            <directory>${project.basedir}/Server</directory>
+            <outputDirectory>Server</outputDirectory>
+        </fileSet>
+    </fileSets>
+</assembly>

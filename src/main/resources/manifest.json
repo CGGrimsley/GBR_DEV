@@ -1,0 +1,19 @@
+{
+  "Group": "com.kdrgold",
+  "Name": "GoldsBeastsRebalance",
+  "Version": "2.0.0",
+  "Description": "Overhauls creature stats, combat behavior, spawning, and loot tables",
+  "Authors": [
+    {
+      "Name": "kdrgold",
+      "Contact": ""
+    }
+  ],
+  "Website": "",
+  "Main": "com.kdrgold.gbr.GBRPlugin",
+  "ServerVersion": "*",
+  "Dependencies": {},
+  "OptionalDependencies": {},
+  "LoadBefore": {},
+  "SubPlugins": []
+}

@@ -1,37 +1,79 @@
 # Gold's Beasts Rebalance
 
-## Description
-Overhauls creature stats, combat behavior, spawning, and loot tables for more engaging and rewarding encounters. Adds elite variants, reduces spam mechanics, and ensures tough fights are worth your time.
+[![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
+[![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
+[![License](https://img.shields.io/github/license/CGGrimsley/GBR_DEV)](LICENSE)
+
+> **For Players:** Download the compiled mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)  
+> **For Developers:** This repository contains the source code for building and contributing to the mod
 
 ---
 
-## NEW CONTENT
+## Description
+Overhauls creature stats, combat behavior, spawning, and loot tables for more engaging and rewarding encounters. Adds elite variants with **conditional spawning system**, reduces spam mechanics, and ensures tough fights are worth your time.
 
-### Adventurer Bear
-An elite grizzly bear variant wearing scavenged armor.
+**NEW in v2.0:** Elite creatures now spawn dynamically based on your kill count, making encounters progressively more challenging and rewarding!
 
-**Features:**
-- Significantly increased health pool
-- Higher damage output than the Battle Hardened Bear
-- Faster movement speed
-- Enhanced loot drops including valuable ingredients
+---
 
-### Battle Hardened Bear
-A rare grizzly variant wearing a helmet from past encounters.
+## 🎮 For Players
 
-**Features:**
-- Increased Max Health
-- Increased damage and movement speed
-- Collectable Bear Helmet
-- Superior loot table with ore bars and materials
+### Installation
 
-### Battle Scarred Wolf
-A veteran alpha wolf that hunts alone rather than in packs.
+**Download the mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
 
-**Features:**
-- Increased health and damage
+#### Dedicated Servers
+1. Download the `.jar` file from CurseForge
+2. Place it in `<server-directory>/mods/`
+3. Restart the server
+
+#### Singleplayer/Local Worlds
+1. Download the `.jar` file from CurseForge
+2. Place it in:
+   - **Global:** `<data-path>/Hytale/UserData/Mods`
+   - **Per-World:** `<data-path>/Hytale/UserData/Saves/<world-name>/mods`
+3. For Global: Right-click your world → Settings → Enable GoldsBeastsRebalance
+4. Launch your world
+
+**Data paths:**
+- **Windows:** `%APPDATA%`
+- **macOS:** `~/Library/Application Support`
+- **Linux:** `~/.var/app/com.hypixel.HytaleLauncher/data`
+
+---
+
+## 🔥 Features
+
+### Conditional Elite Spawning System
+Elite variants spawn dynamically based on your performance:
+- **Kill tracking**: Monitors wolves, grizzly bears, and battle hardened bears over 72 in-game hours
+- **Progressive difficulty**: 5 kills → 60% spawn chance | 6+ kills → 100% guaranteed
+- **Smart spawning**: Elites spawn 10-20 blocks away from kill location
+- **Rewarding gameplay**: More kills = tougher encounters with better loot
+
+### Elite Variants
+
+#### 🐺 Battle Scarred Wolf
+**Spawns after killing 5-6 wolves**
+- Increased health
+- **Bleed attack**: 25 damage over 10 seconds (5 dmg/tick)
+- Custom bleed status icon
 - Enhanced loot drops
-- Rare spawn
+- Solo hunter
+
+#### 🐻 Battle Hardened Bear
+**Spawns after killing 5-6 grizzly bears**
+- Increased health and damage
+- Wears scavenged helmet
+- Increased loot
+- Aggressive combat behavior
+
+#### ⚔️ Bear Adventurer  
+**Spawns after killing 2-3 Battle Hardened Bears**
+- Ultimate elite tier
+- Wears full scavenged armor
+- Highest stats of all bear variants
+- Rare spawn with Increased loot
 
 ---
 
@@ -89,34 +131,106 @@ A veteran alpha wolf that hunts alone rather than in packs.
 
 ---
 
-## Installation
-
-### Dedicated Servers
-1. Download `GOLDS_BEASTS_REBALANCE_X.X.zip`
-2. Place the file in `<server-directory>/mods/`
-3. Restart the server
-
-### Singleplayer/Local Worlds
-1. Download `GOLDS_BEASTS_REBALANCE_X.X.zip`
-2. Place the file in one of the following directories:
-   - **Global Installation:** `<data-path>/Hytale/UserData/Mods`
-   - **Per-World Installation:** `<data-path>/Hytale/UserData/Saves/<world-name>/mods`
-3. For Global Installation: Launch Hytale, right-click your world in the world selection menu, open world settings, enable the mod by checking the box next to GoldsBeastsRebalance, and save settings
-4. Launch or reload your world
-
-**Data path locations:**
-- **Windows:** `%APPDATA%`
-- **macOS:** `~/Library/Application Support`
-- **Linux:** `~/.var/app/com.hypixel.HytaleLauncher/data`
-
----
-
 ## Compatibility
 May conflict with mods that modify the same creatures, loot tables, spawning systems, or NPC behavior.
 
 ---
 
-**Version:** 1.3.0  
-**Author:** kdrgold
+## 🛠️ For Developers
 
-*The Gold's Beasts Rebalance Team*
+### Building from Source
+
+**Requirements:**
+- Java 17+
+- Maven 3.6+
+- Hytale Server API (included via system dependency)
+
+**Build commands:**
+```bash
+# Clone the repository
+git clone https://github.com/CGGrimsley/GBR_DEV.git
+cd GBR_DEV
+
+# Clean and build
+mvn clean package
+
+# Output: target/golds-beasts-rebalance-2.0.0.jar
+```
+
+### Project Structure
+```
+├── Common/                    # Client assets (models, textures, UI)
+│   ├── Icons/                # Entity icons
+│   ├── NPC/                  # NPC models and textures
+│   └── UI/                   # Status effect icons
+├── Server/                    # Server assets (data-driven)
+│   ├── Drops/                # Loot tables
+│   ├── Entity/Effects/       # Status effects (Bleed)
+│   ├── Models/               # NPC model definitions
+│   └── NPC/                  # Roles, spawning, flocks
+├── src/main/java/            # Java plugin code
+│   └── com/kdrgold/gbr/
+│       ├── components/       # Kill tracking, data storage
+│       ├── config/           # Configuration constants
+│       └── systems/          # Kill tracking, elite spawning
+└── src/main/resources/       # Plugin metadata
+```
+
+### Configuration
+
+Settings are in [ConditionalSpawnConfig.java](src/main/java/com/kdrgold/gbr/config/ConditionalSpawnConfig.java):
+- Kill thresholds (5 for 60%, 6 for 100%)
+- Time window (72 hours)
+- Entity mappings
+- Bleed damage (5/tick, 10s duration)
+- Debug mode
+
+See [config.yml](src/main/resources/config.yml) for reference values.
+
+### Contributing
+
+1. Fork this repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Make your changes
+4. Test thoroughly in-game
+5. Commit (`git commit -m 'Add amazing feature'`)
+6. Push to your fork (`git push origin feature/amazing-feature`)
+7. Open a Pull Request
+
+### Development Setup
+
+1. Set up your IDE with Java 17+
+2. Update `pom.xml` line 38 to point to your local HytaleServer.jar
+3. Run `mvn clean install` to verify setup
+4. Make changes and test with `mvn clean package`
+
+---
+
+## Technical Details
+
+**Version:** 2.0.0  
+**Hytale API:** v2026.01.17-4b0f30090  
+**Java Version:** 17+  
+**Build System:** Maven  
+**License:** See [LICENSE](LICENSE)
+
+### Key Systems
+- **PlayerKillTrackerComponent**: Persistent kill tracking per player
+- **KillTrackingSystem**: Monitors NPC deaths and updates kill counts
+- **EliteSpawnSystem**: Handles conditional elite spawning logic
+- **JSON-based status effects**: Bleed effect with custom icon
+
+---
+
+## Support & Links
+
+- **Download Mod:** [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
+- **Report Issues:** [GitHub Issues](https://github.com/CGGrimsley/GBR_DEV/issues)
+- **Source Code:** [GitHub Repository](https://github.com/CGGrimsley/GBR_DEV)
+
+---
+
+## Credits
+
+**Author:** kdrgold  
+**Team:** The Gold's Beasts Rebalance Team

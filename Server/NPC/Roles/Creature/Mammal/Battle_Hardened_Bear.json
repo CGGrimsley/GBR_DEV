@@ -54,13 +54,13 @@
       4,
       4
     ],
-    "MaintainDistanceWhileAlerted": false,
+    "MaintainDistanceWhileAlerted": true,
     "ThreatenDelayRange": [
       2,
       2
     ],
     "ThreatenAnimation": "Roar",
-    "FleeIfNotThreatened": false,
+    "FleeIfNotThreatened": true,
     "FleeRange": 11,
     "LeashDistance": {
       "Compute": "LeashDistance"

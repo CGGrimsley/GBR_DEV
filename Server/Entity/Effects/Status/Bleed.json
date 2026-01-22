@@ -1,0 +1,30 @@
+{
+  "ApplicationEffects": {
+    "EntityBottomTint": "#200000",
+    "EntityTopTint": "#8B0000",
+    "EntityAnimationId": "Hurt",
+    "WorldSoundEventId": "SFX_Unarmed_Impact",
+    "LocalSoundEventId": "SFX_Unarmed_Impact",
+    "Particles": [
+      {
+        "SystemId": "Impact_Sword_Basic"
+      }
+    ]
+  },
+  "DamageCalculatorCooldown": 2,
+  "DamageCalculator": {
+    "BaseDamage": {
+      "Physical": 5
+    }
+  },
+  "DamageEffects": {
+    "WorldSoundEventId": "SFX_Unarmed_Impact",
+    "PlayerSoundEventId": "SFX_Unarmed_Impact"
+  },
+  "OverlapBehavior": "Extend",
+  "RemovalBehavior": "Duration",
+  "Infinite": false,
+  "Debuff": true,
+  "StatusEffectIcon": "UI/StatusEffects/Bleed.png",
+  "Duration": 10
+}

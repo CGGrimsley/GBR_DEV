@@ -1,0 +1,58 @@
+# Gold's Beasts Rebalance Configuration
+# 
+# NOTE: This file is for reference only. 
+# Hytale's current plugin API does not support external config files.
+# To modify these settings, edit ConditionalSpawnConfig.java and rebuild the mod.
+# 
+# Future updates may add runtime configuration support when the API allows it.
+
+# ==================== GENERAL SETTINGS ====================
+
+# Enable or disable the entire conditional spawning system
+enable-conditional-spawning: true
+
+# Enable verbose debug logging for troubleshooting
+debug-mode: false
+
+# ==================== SPAWN THRESHOLDS ====================
+
+# Number of kills required for elite spawn chances
+kill-threshold-low: 5        # 60% spawn chance
+kill-threshold-high: 6       # 100% spawn chance (guaranteed)
+
+# Spawn chance percentages (0.0 to 1.0)
+spawn-chance-low: 0.6        # 60% at low threshold
+spawn-chance-high: 1.0       # 100% at high threshold
+
+# Time window for kill tracking (in hours)
+kill-tracking-window-hours: 72
+
+# ==================== ENTITY MAPPINGS ====================
+
+# Maps base entities to their elite variants
+# Format: base-entity: elite-variant
+
+entity-mappings:
+  wolf:
+    base-name: "Wolf_Black"
+    elite-name: "Battle_Scarred_Wolf"
+    kill-threshold: 5
+  
+  bear:
+    base-name: "Bear_Grizzly"
+    elite-name: "Battle_Hardened_Bear"
+    kill-threshold: 5
+  
+  adventurer-bear:
+    base-name: "Battle_Hardened_Bear"
+    elite-name: "Bear_Adventurer"
+    kill-threshold: 2
+
+# ==================== BLEED EFFECT SETTINGS ====================
+
+# Bleed status effect parameters
+bleed:
+  damage-per-tick: 5
+  tick-interval-seconds: 2
+  duration-seconds: 10
+  # Total damage: (duration / tick-interval) * damage-per-tick = 25 damage over 10 seconds

@@ -9,16 +9,6 @@
       "Id": "Bear_Grizzly"
     },
     {
-      "Weight": 1,
-      "SpawnBlockSet": "Soil",
-      "Id": "Bear_Adventurer"
-    },
-    {
-      "Weight": 2,
-      "SpawnBlockSet": "Soil",
-      "Id": "Battle_Hardened_Bear"
-    },
-    {
       "Weight": 5,
       "SpawnBlockSet": "Soil_NoSnow",
       "Id": "Snake_Cobra"

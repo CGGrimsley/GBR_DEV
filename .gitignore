@@ -12,6 +12,19 @@ Thumbs.db
 .idea/
 *.sublime-*
 *.code-workspace
+*.iml
+
+# Maven build files
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
 
 # Build and distribution
 dist/
@@ -24,6 +37,20 @@ build/
 *.log
 debug/
 logs/
+hs_err_pid*
+
+# Client logs (generated during testing)
+*_client.log
+
+# Documentation artifacts (keep only README.md)
+*_SUMMARY.md
+*_GUIDE.md
+*_NOTES.md
+*_STATUS.md
+ARCHITECTURE.md
+INTEGRATION_INSTRUCTIONS.md
+PROJECT_SUMMARY.md
+COMPILATION_SUCCESS.md
 
 # Node modules (if any)
 node_modules/
@@ -33,7 +60,20 @@ __pycache__/
 *.pyc
 *.pyo
 
+# Java compiled files
+*.class
+
+# Package Files
+*.jar
+*.war
+*.nar
+*.ear
+
 # Backup files
 *.orig
 *_backup
 *_old
+
+# OS specific
+Thumbs.db
+.DS_Store

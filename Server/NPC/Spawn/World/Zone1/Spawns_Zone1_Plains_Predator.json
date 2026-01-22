@@ -8,11 +8,6 @@
       "SpawnBlockSet": "Soil",
       "Id": "Wolf_Black",
       "Flock": "Pack_Small"
-    },
-    {
-      "Weight": 0.5,
-      "SpawnBlockSet": "Soil",
-      "Id": "Battle_Scarred_Wolf"
     }
   ],
   "DayTimeRange": [

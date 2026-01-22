@@ -14,8 +14,12 @@
       "Value": 70,
       "Description": "Max health for the NPC"
     },
+    "LeashDistance": {
+      "Value": 32,
+      "Description": "Leash Distance."
+    },
     "HardLeashDistance": {
-      "Value": 80,
+      "Value": 52,
       "Description": "An absolute maximum from the the leash position the NPC can go before turning back."
     },
     "MemoriesNameOverride": {
@@ -52,22 +56,24 @@
       3,
       3
     ],
-    "MaintainDistanceWhileAlerted": false,
+    "MaintainDistanceWhileAlerted": true,
     "ThreatenDelayRange": [
       2,
       2
     ],
     "ThreatenAnimation": "Howl",
-    "FleeIfNotThreatened": false,
-    "FleeRange": 11,
+    "FleeIfNotThreatened": true,
+    "FleeRange": 12,
+    "LeashDistance": {
+      "Compute": "LeashDistance"
+    },
     "HardLeashDistance": {
       "Compute": "HardLeashDistance"
     },
-    "LeashDistance": 30,
     "LeashMinPlayerDistance": 7,
     "LeashTimer": [
-      4,
-      5
+      3,
+      4
     ],
     "CombatBehaviorDistance": 6,
     "CombatDirectWeight": 0,
@@ -118,6 +124,11 @@
               "Knockback": {
                 "Force": 2
               }
+            },
+            "Next": {
+              "Type": "ApplyEffect",
+              "Entity": "Target",
+              "EffectId": "Bleed"
             }
           }
         ]

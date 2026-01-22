@@ -1,4 +1,4 @@
-# Gold's Beasts Rebalance
+# Gold's Beasts Rebalance v2.0.2 - Release Notes
 
 [![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
 [![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
@@ -13,6 +13,8 @@
 ## Description
 Overhauls creature stats, combat behavior, spawning, and loot tables for more engaging and rewarding encounters. Adds elite variants with **conditional spawning system**, reduces spam mechanics, and ensures tough fights are worth your time.
 
+**NEW in v2.0.2:** Modular pack system! Choose to install just the base assets, or add the optional rebalance pack for stat changes!  
+**NEW in v2.0.1:** Proper Asset pack and plugin generation when compiled!  
 **NEW in v2.0:** Elite creatures now spawn dynamically based on your kill count, making encounters progressively more challenging and rewarding!
 
 ---
@@ -21,24 +23,28 @@ Overhauls creature stats, combat behavior, spawning, and loot tables for more en
 
 ### Installation
 
-**Download the Plugin from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
-**Download the Asset Pack from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beast-rebalance-asset-pack)**
+**Download from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
 
-⚠️ **Important:** You must download and install **BOTH** files:
-- `golds-beasts-rebalance-2.0.1.jar` (Plugin)
-- `golds-beasts-rebalance-assetpack-2.0.1.zip` (Asset Pack)
+⚠️ **Required Files:**
+- `golds-beasts-v2.0.2.jar` (Plugin - Required)
+- `golds-beasts-asset-pack-v2.0.2.zip` (Assets - Required)
+
+📦 **Optional:**
+- `golds-beasts-rebalanced-v2.0.2.zip` (Rebalance Pack - Optional)
+
+The **Rebalance Pack** contains stat changes, spawn adjustments, and elite variants. Install it if you want the full rebalanced experience!
 
 #### Dedicated Servers
-1. Download **both** the `.jar` and `.zip` files from CurseForge
-2. Place both files in `<server-directory>/mods/`
+1. Download the `.jar` and `.zip` file(s) from CurseForge
+2. Place all files in `<server-directory>/mods/`
 3. Restart the server
 
 #### Singleplayer/Local Worlds
-1. Download **both** the `.jar` and `.zip` files from CurseForge
-2. Place both files in:
+1. Download the `.jar` and `.zip` file(s) from CurseForge
+2. Place all files in:
    - **Global:** `<data-path>/Hytale/UserData/Mods`
    - **Per-World:** `<data-path>/Hytale/UserData/Saves/<world-name>/mods`
-3. For Global: Right-click your world → Settings → Enable both mods
+3. For Global: Right-click your world → Settings → Enable the mods
 4. Launch your world
 
 **Data paths:**
@@ -160,9 +166,10 @@ cd GBR_DEV
 # Clean and build
 mvn clean package
 
-# Output files:
-# - target/golds-beasts-rebalance-2.0.1.jar (Plugin)
-# - target/golds-beasts-rebalance-assetpack-2.0.1.zip (Asset Pack)
+# Output files (in target/):
+# - golds-beasts-v2.0.2.jar (Plugin)
+# - golds-beasts-asset-pack-v2.0.2.zip (Asset Pack)
+# - golds-beasts-rebalanced-v2.0.2.zip (Rebalance Pack)
 ```
 
 ### Project Structure
@@ -216,11 +223,11 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 ## Technical Details
 
-**Version:** 2.0.1  
+**Version:** 2.0.2  
 **Hytale API:** v2026.01.17-4b0f30090  
 **Java Version:** 17+  
 **Build System:** Maven  
-**Distribution:** Separate plugin JAR + asset pack ZIP  
+**Distribution:** Plugin JAR + Asset Pack ZIP + Optional Rebalance Pack ZIP  
 **License:** See [LICENSE](LICENSE)
 
 ### Key Systems
@@ -228,6 +235,7 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 - **KillTrackingSystem**: Monitors NPC deaths and updates kill counts
 - **EliteSpawnSystem**: Handles conditional elite spawning logic
 - **JSON-based status effects**: Bleed effect with custom icon
+- **Modular Pack System**: Separates base assets from balance changes for flexibility
 
 ---
 

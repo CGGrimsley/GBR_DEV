@@ -1,8 +1,8 @@
 {
   "Group": "kdrgold",
-  "Name": "GoldsBeasts",
+  "Name": "GoldsBeastRebalanced",
   "Version": "2.0.2",
-  "Description": "Core plugin for Gold's Beasts - Implements creature behavior, combat, and elite spawning system",
+  "Description": "Rebalance pack for Gold's Beasts - Contains stat changes, spawn adjustments, and new elite variants",
   "Authors": [
     {
       "Name": "kdrgold",
@@ -17,5 +17,4 @@
   "DisabledByDefault": false,
   "IncludesAssetPack": false,
   "SubPlugins": []
-
 }

@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.kdrgold</groupId>
-    <artifactId>golds-beasts-rebalance</artifactId>
-    <version>2.0.1</version>
+    <artifactId>golds-beasts</artifactId>
+    <version>2.0.2</version>
     <packaging>jar</packaging>
 
     <name>Gold's Beasts Rebalance</name>
@@ -91,6 +91,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.6.0</version>
                 <executions>
+                    <!-- Asset Pack -->
                     <execution>
                         <id>create-asset-pack</id>
                         <phase>package</phase>
@@ -101,7 +102,23 @@
                             <descriptors>
                                 <descriptor>src/assembly/assetpack.xml</descriptor>
                             </descriptors>
-                            <finalName>${project.artifactId}-assetpack-${project.version}</finalName>
+                            <finalName>golds-beasts-asset-pack-${project.version}</finalName>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                    
+                    <!-- Rebalance Pack -->
+                    <execution>
+                        <id>create-rebalance-pack</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <descriptors>
+                                <descriptor>src/assembly/rebalance.xml</descriptor>
+                            </descriptors>
+                            <finalName>golds-beasts-rebalanced-${project.version}</finalName>
                             <appendAssemblyId>false</appendAssemblyId>
                         </configuration>
                     </execution>

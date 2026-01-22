@@ -7,23 +7,33 @@
     </formats>
     <includeBaseDirectory>false</includeBaseDirectory>
     <fileSets>
-        <!-- Include manifest.json from root -->
-        <fileSet>
-            <directory>${project.basedir}</directory>
-            <outputDirectory>/</outputDirectory>
-            <includes>
-                <include>manifest.json</include>
-            </includes>
-        </fileSet>
         <!-- Include Common assets -->
         <fileSet>
             <directory>${project.basedir}/Common</directory>
             <outputDirectory>Common</outputDirectory>
         </fileSet>
-        <!-- Include Server assets -->
+        <!-- Include Server assets, but EXCLUDE rebalance files -->
         <fileSet>
             <directory>${project.basedir}/Server</directory>
             <outputDirectory>Server</outputDirectory>
+            <excludes>
+                <!-- Exclude all spawn changes (rebalance data) -->
+                <exclude>NPC/Spawn/**</exclude>
+                <!-- Exclude rebalanced creature roles -->
+                <exclude>NPC/Roles/Creature/Reptile/Toad_Rhino_Magma.json</exclude>
+                <exclude>NPC/Roles/Creature/Reptile/Toad_Rhino.Json</exclude>
+                <exclude>NPC/Roles/Creature/Mammal/Bear_Grizzly.Json</exclude>
+                <exclude>NPC/Roles/Creature/Mammal/Wolf_Black.Json</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
+    <files>
+        <!-- Use asset pack specific manifest -->
+        <file>
+            <source>${project.basedir}/src/assembly/manifest-assetpack.json</source>
+            <outputDirectory>/</outputDirectory>
+            <destName>manifest.json</destName>
+            <filtered>true</filtered>
+        </file>
+    </files>
 </assembly>

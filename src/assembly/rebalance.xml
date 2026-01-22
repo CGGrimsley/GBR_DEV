@@ -1,0 +1,62 @@
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.2.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.2.0 http://maven.apache.org/xsd/assembly-2.2.0.xsd">
+    <id>rebalance</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <!-- Include Magma Rhino Toad role -->
+        <fileSet>
+            <directory>${project.basedir}/Server/NPC/Roles/Creature/Reptile</directory>
+            <outputDirectory>Server/NPC/Roles/Creature/Reptile</outputDirectory>
+            <includes>
+                <include>Toad_Rhino_Magma.json</include>
+            </includes>
+        </fileSet>
+        
+        <!-- Include Rhino Toad role -->
+        <fileSet>
+            <directory>${project.basedir}/Server/NPC/Roles/Creature/Reptile</directory>
+            <outputDirectory>Server/NPC/Roles/Creature/Reptile</outputDirectory>
+            <includes>
+                <include>Toad_Rhino.Json</include>
+            </includes>
+        </fileSet>
+        
+        <!-- Include Grizzly Bear role (health changes) -->
+        <fileSet>
+            <directory>${project.basedir}/Server/NPC/Roles/Creature/Mammal</directory>
+            <outputDirectory>Server/NPC/Roles/Creature/Mammal</outputDirectory>
+            <includes>
+                <include>Bear_Grizzly.Json</include>
+            </includes>
+        </fileSet>
+        
+        <!-- Include Black Wolf role (health changes) -->
+        <fileSet>
+            <directory>${project.basedir}/Server/NPC/Roles/Creature/Mammal</directory>
+            <outputDirectory>Server/NPC/Roles/Creature/Mammal</outputDirectory>
+            <includes>
+                <include>Wolf_Black.Json</include>
+            </includes>
+        </fileSet>
+        
+        <!-- Include all spawn changes -->
+        <fileSet>
+            <directory>${project.basedir}/Server/NPC/Spawn</directory>
+            <outputDirectory>Server/NPC/Spawn</outputDirectory>
+        </fileSet>
+    </fileSets>
+    
+    <files>
+        <!-- Rename manifest-rebalance.json to manifest.json -->
+        <file>
+            <source>${project.basedir}/src/assembly/manifest-rebalance.json</source>
+            <outputDirectory>/</outputDirectory>
+            <destName>manifest.json</destName>
+            <filtered>true</filtered>
+        </file>
+    </files>
+</assembly>

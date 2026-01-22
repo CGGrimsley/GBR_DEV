@@ -12,7 +12,9 @@
   "Website": "",
   "Main": "com.kdrgold.gbr.GBRPlugin",
   "ServerVersion": "*",
-  "Dependencies": {},
+  "Dependencies": {
+    "kdrgold.GoldsBeastRebalance": "2.0.1"
+  },
   "OptionalDependencies": {},
   "LoadBefore": {},
   "SubPlugins": []

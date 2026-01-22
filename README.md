@@ -2,7 +2,7 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
 [![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
-[![CurseForge - Assets](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
+[![CurseForge - Assets](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beast-rebalance-asset-pack)
 [![License: Custom](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
 
 > **For Players:** Download the compiled mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)  
@@ -21,8 +21,8 @@ Overhauls creature stats, combat behavior, spawning, and loot tables for more en
 
 ### Installation
 
-**Download the plugin from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
-**Download the Asset from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
+**Download the Plugin from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
+**Download the Asset Pack from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beast-rebalance-asset-pack)**
 
 ⚠️ **Important:** You must download and install **BOTH** files:
 - `golds-beasts-rebalance-2.0.1.jar` (Plugin)

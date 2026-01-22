@@ -2,7 +2,7 @@
 
 [![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
 [![CurseForge](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
-[![License](https://img.shields.io/github/license/CGGrimsley/GBR_DEV)](LICENSE)
+[![License: Custom](https://img.shields.io/badge/License-Custom-blue. svg)](LICENSE)
 
 > **For Players:** Download the compiled mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)  
 > **For Developers:** This repository contains the source code for building and contributing to the mod
@@ -234,3 +234,4 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 **Author:** kdrgold  
 **Team:** The Gold's Beasts Rebalance Team
+

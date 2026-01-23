@@ -32,6 +32,10 @@ public class ConditionalSpawnConfig {
     public static final String ENTITY_BATTLE_HARDENED_BEAR = "Battle_Hardened_Bear";
     public static final String ENTITY_BATTLE_SCARRED_WOLF = "Battle_Scarred_Wolf";
     public static final String ENTITY_ADVENTURER_BEAR = "Bear_Adventurer";
+    public static final String ENTITY_TOAD_RHINO_MAGMA = "Toad_Rhino_Magma";
+    public static final String ENTITY_REX_CAVE = "Rex_Cave";
+    public static final String ENTITY_UMBRA_TOAD = "Umbra_Toad";
+    public static final String ENTITY_UMBRA_REX = "Umbra_Rex";
     
     // ==================== KILL THRESHOLDS ====================
     
@@ -49,6 +53,16 @@ public class ConditionalSpawnConfig {
      * Number of Battle Hardened Bear kills required to trigger Adventurer Bear spawn chance
      */
     public static final int ADVENTURER_BEAR_THRESHOLD = 2;
+    
+    /**
+     * Number of Toad_Rhino_Magma kills required to trigger Umbra_Toad spawn chance (3-4 kills)
+     */
+    public static final int UMBRA_TOAD_THRESHOLD = 3;
+    
+    /**
+     * Number of Rex_Cave kills required to trigger Umbra_Rex spawn chance (2-3 kills)
+     */
+    public static final int UMBRA_REX_THRESHOLD = 2;
     
     // ==================== TIME WINDOWS ====================
     
@@ -142,6 +156,10 @@ public class ConditionalSpawnConfig {
                 return ENTITY_BATTLE_HARDENED_BEAR;
             case ENTITY_BATTLE_HARDENED_BEAR:
                 return ENTITY_ADVENTURER_BEAR;
+            case ENTITY_TOAD_RHINO_MAGMA:
+                return ENTITY_UMBRA_TOAD;
+            case ENTITY_REX_CAVE:
+                return ENTITY_UMBRA_REX;
             default:
                 return null;
         }
@@ -161,6 +179,10 @@ public class ConditionalSpawnConfig {
                 return BATTLE_HARDENED_BEAR_THRESHOLD;
             case ENTITY_BATTLE_HARDENED_BEAR:
                 return ADVENTURER_BEAR_THRESHOLD;
+            case ENTITY_TOAD_RHINO_MAGMA:
+                return UMBRA_TOAD_THRESHOLD;
+            case ENTITY_REX_CAVE:
+                return UMBRA_REX_THRESHOLD;
             default:
                 return 0;
         }
@@ -175,6 +197,8 @@ public class ConditionalSpawnConfig {
     public static boolean isTrackableEntity(String entityType) {
         return entityType.equals(ENTITY_WOLF) 
             || entityType.equals(ENTITY_GRIZZLY_BEAR) 
-            || entityType.equals(ENTITY_BATTLE_HARDENED_BEAR);
+            || entityType.equals(ENTITY_BATTLE_HARDENED_BEAR)
+            || entityType.equals(ENTITY_TOAD_RHINO_MAGMA)
+            || entityType.equals(ENTITY_REX_CAVE);
     }
 }

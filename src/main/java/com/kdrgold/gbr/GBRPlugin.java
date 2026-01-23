@@ -26,6 +26,10 @@ import com.kdrgold.gbr.systems.KillTrackingSystem;
  * - Kill 6+ grizzly bears → 100% guaranteed Battle Hardened Bear spawn
  * - Kill 2 battle hardened bears → 60% chance Adventurer Bear spawns
  * - Kill 3+ battle hardened bears → 100% guaranteed Adventurer Bear spawn
+ * - Kill 3 Toad Rhino Magma → 60% chance Umbra Toad spawns
+ * - Kill 4+ Toad Rhino Magma → 100% guaranteed Umbra Toad spawn
+ * - Kill 2 Rex Cave → 60% chance Umbra Rex spawns (with Bleed effect)
+ * - Kill 3+ Rex Cave → 100% guaranteed Umbra Rex spawn
  * 
  * @author kdrgold
  * @version 2.0.0
@@ -79,6 +83,8 @@ public class GBRPlugin extends JavaPlugin {
                 LOGGER.atInfo().log("[GBR] - Wolves → Battle Scarred Wolf");
                 LOGGER.atInfo().log("[GBR] - Grizzly Bears → Battle Hardened Bear");
                 LOGGER.atInfo().log("[GBR] - Battle Hardened Bears (2 kills) → Adventurer Bear");
+                LOGGER.atInfo().log("[GBR] - Toad Rhino Magma (3 kills) → Umbra Toad");
+                LOGGER.atInfo().log("[GBR] - Rex Cave (2 kills) → Umbra Rex (Bleed attack)");
             } catch (Exception e) {
                 LOGGER.atSevere().log("[GBR] Error registering systems: " + e.getMessage());
                 e.printStackTrace();

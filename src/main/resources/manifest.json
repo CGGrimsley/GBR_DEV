@@ -12,9 +12,7 @@
   "Website": "",
   "Main": "com.kdrgold.gbr.GBRPlugin",
   "ServerVersion": "*",
-  "Dependencies": {
-    "kdrgold.GoldsBeasts": "2.0.2"
-  },
+  "Dependencies": {},
   "OptionalDependencies": {},
   "LoadBefore": {},
   "SubPlugins": []

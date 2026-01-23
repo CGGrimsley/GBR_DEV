@@ -224,6 +224,7 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 ## Technical Details
 
 **Version:** 2.0.2  
+**Version:** 2.0.2  
 **Hytale API:** v2026.01.17-4b0f30090  
 **Java Version:** 17+  
 **Build System:** Maven  
@@ -251,4 +252,5 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 **Author:** kdrgold  
 **Team:** The Gold's Beasts Rebalance Team
+
 

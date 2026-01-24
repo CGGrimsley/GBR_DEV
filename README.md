@@ -1,8 +1,9 @@
 # Gold's Beasts Rebalance v2.1.1
 
 [![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
-[![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
-[![CurseForge - Assets](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beast-rebalance-asset-pack)
+[![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts)
+[![CurseForge - Assets](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-asset-pack)
+[![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalanced)
 [![License: Custom](https://img.shields.io/badge/License-Custom-blue.svg)](LICENSE)
 
 > **For Players:** Download the compiled mod from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)  
@@ -273,6 +274,7 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 **Author:** kdrgold  
 **Team:** The Gold's Beasts Rebalance Team
+
 
 
 

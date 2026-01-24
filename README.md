@@ -1,4 +1,4 @@
-# Gold's Beasts Rebalance v2.1.0 - Release Notes
+# Gold's Beasts Rebalance v2.1.1
 
 [![GitHub Release](https://img.shields.io/github/v/release/CGGrimsley/GBR_DEV)](https://github.com/CGGrimsley/GBR_DEV/releases)
 [![CurseForge - Plugin](https://img.shields.io/badge/CurseForge-Download-orange)](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)
@@ -27,11 +27,11 @@ Overhauls creature stats, combat behavior, spawning, and loot tables for more en
 **Download from [CurseForge](https://www.curseforge.com/hytale/mods/golds-beasts-rebalance)**
 
 ⚠️ **Required Files:**
-- `golds-beasts-v2.1.0.jar` (Plugin - Required)
-- `golds-beasts-asset-pack-v2.1.0.zip` (Assets - Required)
+- `golds-beasts-v2.1.1.jar` (Plugin - Required)
+- `golds-beasts-asset-pack-v2.1.1.zip` (Assets - Required)
 
 📦 **Optional:**
-- `golds-beasts-rebalanced-v2.1.0.zip` (Rebalance Pack - Optional)
+- `golds-beasts-rebalanced-v2.1.1.zip` (Rebalance Pack - Optional)
 
 The **Rebalance Pack** contains stat changes, spawn adjustments, and elite variants. Install it if you want the full rebalanced experience!
 
@@ -188,9 +188,9 @@ cd GBR_DEV
 mvn clean package
 
 # Output files (in target/):
-# - golds-beasts-v2.1.0.jar (Plugin)
-# - golds-beasts-asset-pack-v2.1.0.zip (Asset Pack)
-# - golds-beasts-rebalanced-v2.1.0.zip (Rebalance Pack)
+# - golds-beasts-v2.1.1.jar (Plugin)
+# - golds-beasts-asset-pack-v2.1.1.zip (Asset Pack)
+# - golds-beasts-rebalanced-v2.1.1.zip (Rebalance Pack)
 ```
 
 ### Project Structure
@@ -273,5 +273,6 @@ See [config.yml](src/main/resources/config.yml) for reference values.
 
 **Author:** kdrgold  
 **Team:** The Gold's Beasts Rebalance Team
+
 
 
